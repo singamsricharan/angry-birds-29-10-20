@@ -13,11 +13,14 @@ class SlingShot{
         this.sling = Constraint.create(options);
         World.add(world, this.sling);
     }
+    attach(body){
+        this.sling.bodyA=body
+    }
 
     fly(){
         this.sling.bodyA = null;
     }
-
+    
     display(){
         image(this.sling1,200,20);
         image(this.sling2,170,20);
